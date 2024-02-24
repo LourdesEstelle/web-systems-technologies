@@ -1,0 +1,46 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+</head>
+<body>
+  <h1>Student Registration Form</h1>
+  <form>
+    <table>
+      <tr>
+        <td>First Name:</td>
+        <td><input type="text" name="firstname" required></td>
+      </tr>
+      <tr>
+        <td>Last Name:</td>
+        <td><input type="text" name="lastname" required></td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <select name="gender" required>
+            <option value="">Select...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Date of Birth:</td>
+        <td><input type="date" name="dob" required></td>
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td><input type="text" name="address" required></td>
+      </tr>
+      <tr>
+        <td>Zip Code:</td>
+        <td><input type="text" name="zipcode" required></td>
+      </tr>
+    </table>
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>
