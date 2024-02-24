@@ -10,23 +10,49 @@
     }
 
     td {
-      border: 1px solid #ccc;
-      padding: 5px;
+      border: 1px solid #ddd;
+      padding: 10px;
     }
 
     input,
     select {
       width: 100%;
-      border: 1px solid #ccc;
+      border: 1px solid #ddd;
       padding: 5px;
+      font-family: Arial, sans-serif;
     }
 
     body {
-      background: linear-gradient(to right, #f2994f, #ffe196, #f8e5c0, #c9d3d5, #9adbc7, #eceaea, #fafafa);
+      background-color: #e8f0f2; /* Light blue */
+    }
+
+    .form-box {
+      background-color: white; /* Lighter blue */
+      border: 1px solid #d0d7de; /* Slightly darker blue */
+      padding: 20px;
+      margin: 50px auto; /* Add space above the form */
+      width: 500px;
+      border-radius: 5px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Shadow effect */
+    }
+
+    h1 {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-weight: bold; /* Bold the heading */
+      color: #333; /* Darker gray */
+    }
+
+    label {
+      font-weight: bold; /* Bold the labels */
+      font-family: Arial, sans-serif;
+      display: block; /* Add space between label and field */
+      margin-bottom: 5px;
+      color: #333; /* Darker gray */
     }
 
     button {
-      background-color: #4caf50; /* Light green */
+      background-color: #28a745; /* Darker green */
       color: white;
       border: none;
       padding: 10px 20px;
@@ -38,46 +64,63 @@
   </style>
 </head>
 <body>
-  <h1>Student Registration Form</h1>
-  <form>
-    <table>
-      <tr>
-        <td>First Name:</td>
-        <td><input type="text" name="firstname" required></td>
-      </tr>
-      <tr>
-        <td>Last Name:</td>
-        <td><input type="text" name="lastname" required></td>
-      </tr>
-      <tr>
-        <td>Email Address:</td>
-        <td><input type="email" name="email" required></td>
-      </tr>
-      <tr>
-        <td>Gender:</td>
-        <td>
-          <select name="gender" required>
-            <option value="">Select...</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>Date of Birth:</td>
-        <td><input type="date" name="dob" required></td>
-      </tr>
-      <tr>
-        <td>Address:</td>
-        <td><input type="text" name="address" required></td>
-      </tr>
-      <tr>
-        <td>Zip Code:</td>
-        <td><input type="text" name="zipcode" required></td>
-      </tr>
-    </table>
-    <button type="submit">Register</button>
-  </form>
+  <div class="form-box">
+    <h1>Student Registration Form</h1>
+    <form>
+      <table>
+        <tr>
+          <td>
+            <label for="firstname">First Name:</label>
+          </td>
+          <td><input type="text" name="firstname" id="firstname" required></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="lastname">Last Name:</label>
+          </td>
+          <td><input type="text" name="lastname" id="lastname" required></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email">Email Address:</label>
+          </td>
+          <td><input type="email" name="email" id="email" required></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="gender">Gender:</label>
+          </td>
+          <td>
+            <select name="gender" id="gender" required>
+              <option value="">Select...</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="dob">Date of Birth:</label>
+          </td>
+          <td><input type="date" name="dob" id="dob" required></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="address">Address:</label>
+          </td>
+          <td><input type="text" name="address" id="address" required></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="zipcode">Zip Code:</label>
+          </td>
+          <td><input type="text" name="zipcode" id="zipcode" required></td>
+        </tr>
+      </table>
+      <br>
+      <button type="submit">Register</button>
+    </form>
+  </div>
 </body>
 </html>
