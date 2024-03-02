@@ -1,67 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dashboard</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-			background-color: #f0f0f0;
-		}
-		.header {
-			background-color: #333;
-			color: #fff;
-			padding: 10px 20px;
-			display: flex;
-			justify-content: space-between;
-		}
-		.header h1 {
-			margin: 0;
-		}
-		.nav {
-			background-color: #ddd;
-			padding: 10px 20px;
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-		}
-		.nav a {
-			color: #333;
-			text-decoration: none;
-			padding: 5px;
-		}
-		.nav a:hover {
-			background-color: #ccc;
-		}
-		.main {
-			padding: 20px;
-		}
-		.main h2 {
-			margin: 0;
-			margin-bottom: 10px;
-		}
-		.main p {
-			margin: 0;
-		}
-	</style>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        .welcome {
+            margin-top: 5px;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: left; /* Aligns the navigation links to the left */
+        }
+
+        .nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        .dashboard-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .dashboard-content {
+            font-size: 16px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .copyright {
+            margin-top: 5px;
+        }
+
+        .header {
+            padding-top: 50px;
+        }
+
+        .header-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-	<div class="header">
-		<h1>Dashboard</h1>
-		<div>Welcome, Ronalyn!!</div>
-	</div>
-	<div class="nav">
-		<a href="#">Home</a>
-		<a href="#">Dashboard</a>
-		<a href="#">Analytics</a>
-		<a href="#">Reports</a>
-		<a href="#">Settings</a>
-		<a href="Lab 2_Abalde, Lordweil E.html">Logout</a>
-	</div>
-	<div class="main">
-		<h2>Welcome to the dashboard!</h2>
-		<p>This is the main content area where you can display various information and charts.</p>
-	</div>
+    <div class="container">
+        <div class="header">
+            <span class="header-text">Dashboard</span>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="Lab 2_Abalde, Lordweil E.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="dashboard-header">Welcome to the dashboard!</div>
+            <div class="dashboard-content">This is the main content area where you can display various information and charts.</div>
+        </div>
+        <div class="footer">
+            <div class="copyright">&copy;2024 Dashboard. All rights reserved.</div>
+        </div>
+    </div>
 </body>
 </html>
