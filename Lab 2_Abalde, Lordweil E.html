@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Login Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -19,10 +20,10 @@
     .form-container {
       background-color: #ffffff; 
       width: 400px;
-      height: 300px;
-      border-radius: 20px; /* Adjust border-radius to change the rounded corners */
+      height: auto;
+      border-radius: 20px; 
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
-      padding: 30px;
+      padding: 20px; 
       box-sizing: border-box;
     }
 
@@ -31,13 +32,22 @@
       color: #333; 
     }
 
-    input[type="text"] {
-      width: calc(100% - 20px); /* Adjusted width to fit container */
-      border: 1px solid #ddd;
-      padding: 10px;
-      border-radius: 5px;
-      box-sizing: border-box;
+    .input-group {
+      display: flex;
+      align-items: center;
       margin-bottom: 20px;
+    }
+
+    .input-group label {
+      flex: 0 0 30px;
+      color: #333;
+    }
+
+    .input-group input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
 
     input[type="submit"] {
@@ -45,11 +55,10 @@
       color: white;
       border: none;
       padding: 12px 20px;
-      display: block;
-      width: 100%;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      width: 100%;
     }
 
     input[type="submit"]:hover {
@@ -61,10 +70,14 @@
   <div class="form-container">
     <h1>Login</h1>
     <form action="Lab 2_Abalde, Lordweil E-Dashboard.html" method="POST">
-      <input type="text" name="firstname" id="firstname" placeholder="Username" required>
-
-      <input type="text" name="lastname" id="lastname" placeholder="Password" required>
-
+      <div class="input-group">
+        <label for="username"><i class="fas fa-user"></i></label>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+      </div>
+      <div class="input-group">
+        <label for="password"><i class="fas fa-lock"></i></label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+      </div>
       <input type="submit" value="Login">
     </form>
   </div>
