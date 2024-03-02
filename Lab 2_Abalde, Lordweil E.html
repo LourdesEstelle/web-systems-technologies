@@ -1,1 +1,80 @@
-Ahhh
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f6f8; 
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: #ffffff; 
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333; 
+    }
+
+    label {
+      font-weight: bold; 
+      color: #555; 
+      display: block; 
+      margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff; 
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Student Registration Form</h1>
+    <form action="Lab 2_Abalde, Lordweil E-Dashboard.html" method="POST">
+      <label for="firstname">First Name:</label>
+      <input type="text" name="firstname" id="firstname" required>
+
+      <label for="lastname">Last Name:</label>
+      <input type="text" name="lastname" id="lastname" required>
+
+      <input type="submit" value="Register">
+    </form>
+  </div>
+</body>
+</html>
