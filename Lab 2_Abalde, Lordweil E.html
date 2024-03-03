@@ -50,7 +50,7 @@
       border-radius: 5px;
     }
 
-    input[type="submit"] {
+    button[type="submit"] {
       background-color: #007bff; 
       color: white;
       border: none;
@@ -59,10 +59,17 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    input[type="submit"]:hover {
+    button[type="submit"]:hover {
       background-color: #0056b3;
+    }
+
+    .button-icon {
+      margin-right: 5px;
     }
   </style>
 </head>
@@ -78,7 +85,7 @@
         <label for="password"><i class="fas fa-lock"></i></label>
         <input type="password" id="password" name="password" placeholder="Password" required>
       </div>
-      <input type="submit" value="Login">
+      <button type="submit"><i class="fas fa-sign-in-alt button-icon"></i>Login</button>
     </form>
   </div>
 </body>
