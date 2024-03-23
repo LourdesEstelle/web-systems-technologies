@@ -3,65 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>User Management</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body class="font-sans">
-  <header class="flex justify-between items-center bg-gradient-to-r from-blue-700 to-blue-500 py-4 text-white px-4">
-    <span class="text-lg font-bold">Dashboard</span>
-    <div class="flex space-x-2">
-      <a href="Lab 2_Abalde, Lordweil E.html" class="px-4 py-2 rounded-md bg-red-600 hover:bg-red-700 text-white transition duration-300">Logout</a>
-      <button class="px-4 py-2 rounded-md border border-white hover:bg-gray-100 transition duration-300">Settings</button>
+<body>
+  <div class="flex h-screen">
+    <div class="w-1/3 flex-grow bg-gray-100 p-4">
+      <h1 class="text-2xl font-bold mb-4">Create an Account</h1>
+      <form class="mb-6">
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" id="name" name="name" class="shadow-sm border rounded w-full p-2">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email" class="shadow-sm border rounded w-full p-2">
+        </div>
+        <div class="mb-4">
+          <label for="role" class="block text-sm font-medium text-gray-700">Role</label>
+          <select id="role" name="role" class="shadow-sm border rounded w-full p-2">
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+          </select>
+        </div>
+        <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Create Account</button>
+      </form>
     </div>
-  </header>
+    <div class="w-2/3 bg-white shadow-md rounded overflow-hidden px-4 py-4">
+      <h1 class="text-xl font-bold mb-4">User List</h1>
+      <table class="w-full table-auto">
+        <thead>
+          <tr>
+            <th class="text-left p-2 border-b border-gray-200">ID</th>
+            <th class="text-left p-2 border-b border-gray-200">Name</th>
+            <th class="text-left p-2 border-b border-gray-200">Email</th>
+            <th class="text-left p-2 border-b border-gray-200">Role</th>
+            <th class="text-left p-2 border-b border-gray-200">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-2 border-b border-gray-200">
+              1
+            <td class="p-2 border-b border-gray-200">
+              Ronalyn Anne Padilla
+            </td>
+            <td class="p-2 border-b border-gray-200">
+              ronalyn.padilla@gmail.com
+            </td>
+            <td class="p-2 border-b border-gray-200">
+              Admin
+            </td>
+            <td class="p-2 border-b border-gray-200 flex justify-end">
+              <button class="text-red-500 hover:text-red-700 hover:underline mr-2">
+                <i class='bx bx-trash'></i> Delete</button>
 
-  <main class="flex min-h-screen">
-    <nav class="w-64 bg-gray-800 text-gray-300 flex flex-col justify-between p-4">
-      <ul>
-        <li><a href="https://www.ustp.edu.ph/" class="block py-2 px-4 rounded-lg hover:bg-blue-600 text-white">Home</a></li>
-        <li><a href="https://hims.ustp.edu.ph/" class="block py-2 px-4 rounded-lg hover:bg-blue-600 text-white">Medical</a></li>
-        <li><a href="https://clearance.ustp.edu.ph/" class="block py-2 px-4 rounded-lg hover:bg-blue-600 text-white">E - Clearance</a></li>
-      </ul>
-    </nav>
+              <button class="text-blue-500 hover:text-blue-700 hover:underline mr-2">
+                <i class='bx bx-edit'></i> Edit</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-2 border-b border-gray-200">
+              
+            <td class="p-2 border-b border-gray-200">
+              Ronalyn Test
+            </td>
+            <td class="p-2 border-b border-gray-200">
+              ronalyn.test@gmail.com
+            </td>
+            <td class="p-2 border-b border-gray-200">
+              User
+            </td>
+            <td class="p-2 border-b border-gray-200 flex justify-end">
+              <button class="text-red-500 hover:text-red-700 hover:underline mr-2">
+                <i class='bx bx-trash'></i> Delete</button>
 
-    <div class="flex-1 p-4 bg-white">
-      <h1 class="text-xl font-bold mb-4">Welcome to the dashboard!</h1>
-      <div class="grid grid-cols-3 gap-6">
-        <div class="bg-blue-200 p-6 rounded-lg flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
-          </svg>
-          <span> <a href ="https://prisms.ustp.edu.ph/#students/enrollment" class="text-blue-600 font-semibold text-lg">Enrollment</a> </span>
-        </div>
-        <div class="bg-green-200 p-6 rounded-lg flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-600 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-          <span> <a href ="https://prisms.ustp.edu.ph/#students/grades" class="text-green-600 font-semibold text-lg">Grades</a> </span>
-        </div>
-        <div class="bg-yellow-200 p-6 rounded-lg flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-600 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9v4m0 0V9m0 4h-8m4 0a5 5 0 0 1 0 10 5 5 0 0 1 0-10zm0 0a5 5 0 0 0 0 10 5 5 0 0 0 0-10zm0 0a5 5 0 0 1 0-10 5 5 0 0 1 0 10z" />
-          </svg>
-          <span> <a href ="https://prisms.ustp.edu.ph/padmission" class="text-yellow-600 font-semibold text-lg">Assessment</a> </span>
-        </div>
-        <div class="bg-pink-200 p-6 rounded-lg flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-pink-600 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
-          </svg>
-          <span> <a href ="https://prisms.ustp.edu.ph/enrollment/print_report?event=sal&term=MW5nUlFsVzNkSURDMDUvbDhEQjdUUT09&regid=S3Zya1ZpbXdGTHlpNXp2UExuLzRKdz09&campus=WjlBbzRFTnhBZGkxdG50VmxUTVRjdz09&studno=2022300484" class="text-pink-600 font-semibold text-lg">COR</a> </span>
-        </div>
-        <div class="bg-purple-200 p-6 rounded-lg flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-purple-600 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm-2 11.5a2.5 2.5 0 1 1 5 0m-5-3.5h5" />
-          </svg>
-          <span> <a href ="https://www.ustp.edu.ph/cdeo/library/" class="text-purple-600 font-semibold text-lg">Library</a> </span>
-        </div>
-   
-        <div class="bg-indigo-200 p-6 rounded-lg flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-          <span> <a href ="#your-qrcode-link" class="text-indigo-600 font-semibold text-lg">QR Code</a> </span>
-        </div>
+              <button class="text-blue-500 hover:text-blue-700 hover:underline mr-2">
+                <i class='bx bx-edit'></i> Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
